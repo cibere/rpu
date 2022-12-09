@@ -1,5 +1,3 @@
-import asyncio
-import time
 from typing import Any, AsyncIterable, Awaitable, Callable, Iterable, Optional, Union
 
 MaybeAwaitable = Union[Awaitable, Callable]
