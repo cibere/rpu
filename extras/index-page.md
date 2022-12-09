@@ -17,7 +17,7 @@ py -m pip install -U git+https://github.com/cibere/rpu # requires git to be inst
 # Getting Help
 
 - The <a href="https://discord.gg/pP4mKKbRvk">discord server</a> is always a good place to start.
-- Through <a href="https://github.com/cibere/rpu/discussions">Github Discussions</a> Before creating a post, consider reading <a href="https://github.com/cibere/rpu/discussions/3">The discussion guidelines</a>
+- Through <a href="https://github.com/cibere/rpu/discussions">Github Discussions</a> Before creating a post, consider reading <a href="https://github.com/cibere/rpu/discussions/1">The discussion guidelines</a>
 
 # Documentation Versions
 
