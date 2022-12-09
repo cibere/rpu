@@ -1,3 +1,11 @@
+"""
+Random python utilities
+
+.. include:: ../README.md
+.. include:: ../extras/index-page.md
+.. include:: ../extras/update-log.md
+"""
+
 __description__ = "Random python utilities"
 __version__ = "0.0.1a"
 
