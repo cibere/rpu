@@ -35,7 +35,7 @@ def chunk(iterable: Iterable, max_size: int) -> Iterable[list[Any]]:
         yield final
 
 
-def get(iterable: Iterable, /, **attrs: Any) -> Optional[Any]:
+def get(iterable: Iterable, /, **attrs: Any) -> Any:
     """Gets an item from the given iterable with sertain attributes
 
     Parameters

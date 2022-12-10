@@ -35,7 +35,7 @@ async def chunk(iterable: AsyncIterable, max_size: int) -> AsyncIterable[list[An
         yield final
 
 
-async def get(iterable: AsyncIterable, /, **attrs: Any) -> Optional[Any]:
+async def get(iterable: AsyncIterable, /, **attrs: Any) -> Any:
     """|coro|
 
     Gets an item from the given iterable with sertain attributes
