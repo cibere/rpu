@@ -1,16 +1,16 @@
-from typing import Any, Iterable, Optional
+from typing import Any, AsyncIterable, Optional
 
 __all__ = ["chunk", "get"]
 
 
-def chunk(iterable: Iterable, max_size: int) -> Iterable[list[Any]]:
-    """|iterable|
+async def chunk(iterable: AsyncIterable, max_size: int) -> AsyncIterable[list[Any]]:
+    """|async-iterable|
 
     Chunks the given iterable into chunks of the given size
 
     Parameters
     ----------
-    iterable: `typing.Iterable`
+    iterable: `typing.AsyncIterable`
         The iterable you want to chunk
     max_size: `int`
         the max size of the chunks
@@ -22,7 +22,7 @@ def chunk(iterable: Iterable, max_size: int) -> Iterable[list[Any]]:
     final = []
     current = 0
 
-    for item in iterable:
+    async for item in iterable:
         if current == max_size:
             yield final
             final = []
@@ -35,18 +35,20 @@ def chunk(iterable: Iterable, max_size: int) -> Iterable[list[Any]]:
         yield final
 
 
-def get(iterable: Iterable, /, **attrs: Any) -> Optional[Any]:
-    """Gets an item from the given iterable with sertain attributes
+async def get(iterable: AsyncIterable, /, **attrs: Any) -> Optional[Any]:
+    """|coro|
+
+    Gets an item from the given iterable with sertain attributes
 
     Parameters
     ----------
-    iterable: `typing.Iterable`
+    iterable: `typing.AsyncIterable`
         The item you want to be iterated through
     **attrs: `typing.Any`
         The attribute(s) to check for
     """
 
-    for item in iterable:
+    async for item in iterable:
         for attr in attrs.keys():
             if hasattr(item, attr):
                 if getattr(item, attr) == attrs[attr]:
