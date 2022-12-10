@@ -2,6 +2,7 @@ import logging
 import logging.handlers
 import os
 import shutil
+import webbrowser
 from argparse import Namespace
 from pathlib import Path
 
@@ -100,4 +101,14 @@ for file in files:
 shutil.rmtree("html")
 logger.info(f"Removed old html folder")
 
-logger.info(f"Finished")
+logger.info(f"Finished Generation")
+
+_open = input("\nOpen newly generated docs in your browser? [y/n]: ").lower()
+if _open in ["yes", "y", "ye"]:
+    logger.info("Opening...")
+
+    directory = os.getcwd().replace("\\", "/").replace(" ", "%20")
+    url = f"file:///{directory}/docs/latest/index.html"
+    webbrowser.open(url)
+else:
+    logger.info("Not opening in browser")
