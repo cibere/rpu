@@ -51,6 +51,9 @@ TO_REMOVE = [
 <ul class="hlist">
 <li>rpu.cli.HelpCmd</li>
 </ul>""",
+    """<p>Random python utilities</p>
+<h1 id="rpu">RPU</h1>""",
+    """<p>Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev/stable/index.html">stable docs here</a>, and <a href="https://rpu.cibere.dev/latest/index.html">latest docs here</a></p>""",
 ]
 
 
