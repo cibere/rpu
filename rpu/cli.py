@@ -186,12 +186,6 @@ class ConsoleClient:
         """|decorator|
 
         Creates an event by overriding the events name
-
-        Example
-        ----------
-        @client.event
-        def on_extra_arg_given(command: str) -> None:
-            ...
         """
 
         setattr(self, func.__name__, func)
@@ -215,12 +209,6 @@ class ConsoleClient:
         """|decorator|
 
         Turns a function into a `cli.Command` object, and auto-adds it to the client
-
-        Example
-        ----------
-        @client.command(...)
-        def my_command(command: str) -> None:
-            ...
         """
 
         def inner(func):
