@@ -34,7 +34,7 @@
 <dl>
 <dt id="rpu.cli.Command"><code class="flex name class">
 <span>class <span class="ident">Command</span></span>
-<span>(</span><span>*, name: str, description: str, brief: str, callback, aliases: Optional[list[str]] = None)</span>
+<span>(</span><span>*, name: str, description: str, brief: str, callback: Callable, aliases: Optional[list[str]] = None)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates a command object</p>
@@ -46,8 +46,8 @@
 <dd>The commands long description</dd>
 <dt><strong><code>brief</code></strong> :&ensp;<code>str</code></dt>
 <dd>a brief description for the command</dd>
-<dt>callback:</dt>
-<dt>The commands callback</dt>
+<dt><strong><code>callback</code></strong> :&ensp;<code>typing.Callable</code></dt>
+<dd>The commands callback</dd>
 <dt><strong><code>aliases</code></strong> :&ensp;<code>Optional[list[</code>str<code>]]</code></dt>
 <dd>The commands aliases</dd>
 </dl>
@@ -59,17 +59,14 @@
 <dd>The commands long description</dd>
 <dt><strong><code>brief</code></strong> :&ensp;<code>str</code></dt>
 <dd>a brief description for the command</dd>
-<dt>callback:</dt>
-<dt>The commands callback</dt>
+<dt><strong><code>callback</code></strong> :&ensp;<code>typing.Callable</code></dt>
+<dd>The commands callback</dd>
 <dt><strong><code>aliases</code></strong> :&ensp;<code>list[</code>str<code>]</code></dt>
 <dd>The commands aliases</dd>
 <dt><strong><code>exes</code></strong> :&ensp;<code>list[</code>str<code>]</code></dt>
 <dd>the commands aliases, but it also has the commands name</dd>
 </dl></div>
-<h3>Subclasses</h3>
-<ul class="hlist">
-<li>rpu.cli.HelpCmd</li>
-</ul>
+
 </dd>
 <dt id="rpu.cli.ConsoleClient"><code class="flex name class">
 <span>class <span class="ident">ConsoleClient</span></span>
@@ -92,11 +89,22 @@
 <h3>Methods</h3>
 <dl>
 <dt id="rpu.cli.ConsoleClient.command"><code class="name flex">
-<span>def <span class="ident">command</span></span>(<span>self, *, name: str, description: str, brief: str, aliases: Optional[list[str]] = None)</span>
+<span>def <span class="ident">command</span></span>(<span>self, *, name: Optional[str] = None, description: Optional[str] = None, brief: Optional[str] = None, aliases: Optional[list[str]] = None)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>|decorator|</p>
-<p>Turns a function into a <code>cli.Command</code> object, and auto-adds it to the client</p></div>
+<p>Turns a function into a <code>cli.Command</code> object, and auto-adds it to the client</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>Optional[</code>str<code>]</code></dt>
+<dd>The commands name. if not given, it will use the functions name</dd>
+<dt><strong><code>description</code></strong> :&ensp;<code>Optional[</code>str<code>]</code></dt>
+<dd>The commands description. If not given, will be the functions docstring</dd>
+<dt><strong><code>brief</code></strong> :&ensp;<code>Optional[</code>str<code>]</code></dt>
+<dd>The commands brief description.</dd>
+<dt><strong><code>aliases</code></strong> :&ensp;<code>Optional[list[</code>str<code>]]</code></dt>
+<dd>The commands aliases</dd>
+</dl></div>
 </dd>
 <dt id="rpu.cli.ConsoleClient.dispatch"><code class="name flex">
 <span>def <span class="ident">dispatch</span></span>(<span>self, event_name: str, /, *args: Any, **kwargs: Any) ‑> None</span>

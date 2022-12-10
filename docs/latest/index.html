@@ -77,7 +77,18 @@ The examples can be <a href="https://github.com/cibere/rpu/tree/main/examples">f
 </ul>
 <p>To run a command, simply run <code>py -m rpu &lt;command name&gt;</code></p>
 <h1 id="update-log">Update Log</h1>
-<h2 id="001-so-far">0.0.1 (so far)</h2>
+<h2 id="002-so-far">0.0.2 (so far)</h2>
+<p><strong>Breaking Changes</strong></p>
+<ul>
+<li><code>name</code>, <code>description</code>, and <code>brief</code> in <code><a title="rpu.cli.ConsoleClient" href="cli.html#rpu.cli.ConsoleClient">ConsoleClient</a></code> are not optional. If <code>name</code> is not given, it will be the functions name. If <code>description</code> is not given, it will be the commands docstring.</li>
+</ul>
+<p><strong>Additions</strong></p>
+<p>None</p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Fixed bug where default help cmd in cli would not show description if brief was an empty string</li>
+</ul>
+<h2 id="001">0.0.1</h2>
 <p><strong>Breaking Changes</strong></p>
 <p>None</p>
 <p><strong>Additions</strong></p>
@@ -140,7 +151,8 @@ The examples can be <a href="https://github.com/cibere/rpu/tree/main/examples">f
 <li><a href="#examples">Examples</a></li>
 <li><a href="#cli-commands">CLI Commands</a></li>
 <li><a href="#update-log">Update Log</a><ul>
-<li><a href="#001-so-far">0.0.1 (so far)</a></li>
+<li><a href="#002-so-far">0.0.2 (so far)</a></li>
+<li><a href="#001">0.0.1</a></li>
 </ul>
 </li>
 </ul>

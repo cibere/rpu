@@ -47,6 +47,10 @@ if not os.path.exists(LATEST_DOCS_PATH):
 
 TO_REMOVE = [
     '<meta name="generator" content="pdoc 0.10.0" />',
+    """<h3>Subclasses</h3>
+<ul class="hlist">
+<li>rpu.cli.HelpCmd</li>
+</ul>""",
 ]
 
 
