@@ -1,6 +1,8 @@
 import sys
 from typing import Any, Callable, Optional
 
+from .consts import MISSING
+
 __all__ = ["Command", "ConsoleClient"]
 
 
@@ -17,7 +19,7 @@ class Command:
         description: str,
         brief: str,
         callback: Callable,
-        aliases: Optional[list[str]] = None,
+        aliases: Optional[list[str]] = MISSING,
     ):
         """Creates a command object
 
@@ -99,7 +101,7 @@ CLI Arguments
         if cmd.description:
             print(f"""Description:\n     {cmd.description}""")
 
-    def callback(self, cmd: Optional[str] = None):
+    def callback(self, cmd: Optional[str] = MISSING):
         if cmd is None:
             self.show_commands()
         else:
@@ -107,7 +109,7 @@ CLI Arguments
 
 
 class ConsoleClient:
-    def __init__(self, *, help_command: Optional[Command] = None):
+    def __init__(self, *, help_command: Optional[Command] = MISSING):
         """Creates a CLI console client
 
         Parameters
@@ -201,10 +203,10 @@ class ConsoleClient:
     def command(
         self,
         *,
-        name: Optional[str] = None,
-        description: Optional[str] = None,
-        brief: Optional[str] = None,
-        aliases: Optional[list[str]] = None,
+        name: Optional[str] = MISSING,
+        description: Optional[str] = MISSING,
+        brief: Optional[str] = MISSING,
+        aliases: Optional[list[str]] = MISSING,
     ):
         """|decorator|
 
