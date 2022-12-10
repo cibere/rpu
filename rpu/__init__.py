@@ -12,6 +12,7 @@ __version__ = "0.0.1a"
 from typing import Literal, NamedTuple
 
 from .async_ import *
+from .cli import *
 from .grammar import *
 from .iterables import *
 
