@@ -17,6 +17,7 @@
 
 - Fixed bug where default help cmd in cli would not show description if brief was an empty string
 - Fixed bug where pylance would yell at you when chunking
+- fixed bug with `get` erroring when you try to use what it finds
 
 ## 0.0.1
 
