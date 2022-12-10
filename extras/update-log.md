@@ -12,6 +12,8 @@ None
 - `rpu.async_`
 - `rpu.iterables`
 - docs
+- `rpu.cli`
+- CLI commands
 
 **Bug Fixes**
 
