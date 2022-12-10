@@ -1,5 +1,5 @@
 import sys
-from typing import Any, Optional
+from typing import Any, Callable, Optional
 
 __all__ = ["Command", "ConsoleClient"]
 
@@ -16,7 +16,7 @@ class Command:
         name: str,
         description: str,
         brief: str,
-        callback,
+        callback: Callable,
         aliases: Optional[list[str]] = None,
     ):
         """Creates a command object
@@ -29,7 +29,7 @@ class Command:
             The commands long description
         brief: `str`
             a brief description for the command
-        callback:
+        callback: `typing.Callable`
             The commands callback
         aliases: Optional[list[`str`]]
             The commands aliases
@@ -42,7 +42,7 @@ class Command:
             The commands long description
         brief: `str`
             a brief description for the command
-        callback:
+        callback: `typing.Callable`
             The commands callback
         aliases: list[`str`]
             The commands aliases
