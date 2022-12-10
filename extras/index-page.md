@@ -33,3 +33,12 @@ Stable is the version that is on PYPI, while latest is the alpha/beta version on
 This library's github repository has a wide collection of examples.
 I try to have an example for basically everything inside the library.
 The examples can be <a href="https://github.com/cibere/rpu/tree/main/examples">found here</a>
+
+# CLI Commands
+
+- help: shows this menu
+- version: gives you the version of rpu your using
+- docs: opens rpus docs
+- system-info: gives you system info
+
+To run a command, simply run `py -m rpu <command name>`
