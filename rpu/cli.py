@@ -96,8 +96,8 @@ CLI Arguments
             print(f"""Brief:\n     {cmd.brief}""")
         if cmd.aliases:
             print(f"""Aliases:\n     {', '.join(cmd.aliases)}""")
-        if cmd.brief:
-            print(f"""Brief:\n     {cmd.description}""")
+        if cmd.description:
+            print(f"""Description:\n     {cmd.description}""")
 
     def callback(self, cmd: Optional[str] = None):
         if cmd is None:
@@ -201,23 +201,34 @@ class ConsoleClient:
     def command(
         self,
         *,
-        name: str,
-        description: str,
-        brief: str,
+        name: Optional[str] = None,
+        description: Optional[str] = None,
+        brief: Optional[str] = None,
         aliases: Optional[list[str]] = None,
     ):
         """|decorator|
 
         Turns a function into a `cli.Command` object, and auto-adds it to the client
+
+        Parameters
+        ----------
+        name: Optional[`str`]
+            The commands name. if not given, it will use the functions name
+        description: Optional[`str`]
+            The commands description. If not given, will be the functions docstring
+        brief: Optional[`str`]
+            The commands brief description.
+        aliases: Optional[list[`str`]]
+            The commands aliases
         """
 
-        def inner(func):
+        def inner(func: Callable):
             cmd = Command(
-                name=name,
-                description=description,
+                name=name or func.__name__,
+                description=description or func.__doc__ or "",
+                brief=brief or "",
                 aliases=aliases,
                 callback=func,
-                brief=brief,
             )
 
             if any(
