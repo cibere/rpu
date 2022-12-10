@@ -1,46 +1,25 @@
-from .cli import ConsoleClient
+from rpu import ConsoleClient
 
+# creating our client instance.
+# It also accepts a `help_command` argument, though it is optional
+# and we will use the default help_command for this example
 client = ConsoleClient()
 
 
+# using the decorator `client.command`
+# will make it so we don't have to manually add the command and monkey patch a callback
+# in the decorator we can set the name, description, brief (short description) and aliases
+# if we do not set a name, it will take the functions name. In this case: 'test_cmd'
+# if we do not pass a description, it will use the functions docstring. Though sice we do not add a docstring, it will not have a description
 @client.command(
-    name="version",
-    description="gives you the version of rpu you are running",
-    brief="gives you the version of rpu your using",
-    aliases=["v"],
+    name="test-cmd",
+    description="the commands long description",
+    brief="short cmd description",
+    aliases=["test-cmd-aliase"],
 )
-def cmd_version():
-    print(rpu.__version__)
+def test_cmd():
+    print("Hello from test command!")
 
 
-@client.command(
-    name="docs",
-    description="opens rpu's documentation. If your using alpha/beta, latest docs will be brought up. If your using final then stable docs will be brought up.",
-    brief="opens rpus docs",
-    aliases=["d"],
-)
-def cmd_docs():
-    version = "stable" if rpu.version_info.releaselevel == "final" else "latest"
-
-    print(f"Opening the {version} docs in your browser")
-    webbrowser.open(f"https://rpu.cibere.dev/{version}/index")
-
-
-@client.command(
-    name="system-info",
-    description="gives you system information. Specifically rpu version, python version, and os",
-    brief="gives you system info",
-    aliases=["os", "s"],
-)
-def cmd_system_info():
-    info = {}
-
-    info["ciberedev.py"] = rpu.__version__
-    info["python"] = sys.version.split(" ")[0]
-    info["OS"] = platform.platform()
-
-    nl = "\n"
-    print(nl.join([f"{item}: {info[item]}" for item in info]))
-
-
+# starting the client
 client.run()
