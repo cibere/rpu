@@ -104,7 +104,7 @@ logger.info(f"Removed old html folder")
 logger.info(f"Finished Generation")
 
 _open = input("\nOpen newly generated docs in your browser? [y/n]: ").lower()
-if _open in ["yes", "y", "ye"]:
+if _open.startswith("y"):
     logger.info("Opening...")
 
     directory = os.getcwd().replace("\\", "/").replace(" ", "%20")

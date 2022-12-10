@@ -81,12 +81,18 @@ The examples can be <a href="https://github.com/cibere/rpu/tree/main/examples">f
 <p><strong>Breaking Changes</strong></p>
 <ul>
 <li><code>name</code>, <code>description</code>, and <code>brief</code> in <code><a title="rpu.cli.ConsoleClient" href="cli.html#rpu.cli.ConsoleClient">ConsoleClient</a></code> are not optional. If <code>name</code> is not given, it will be the functions name. If <code>description</code> is not given, it will be the commands docstring.</li>
+<li>all async stuff have been moved under the <code><a title="rpu.async_" href="async_/index.html">rpu.async_</a></code> folder</li>
 </ul>
 <p><strong>Additions</strong></p>
-<p>None</p>
+<ul>
+<li><code><a title="rpu.consts" href="consts.html">rpu.consts</a></code></li>
+<li><code><a title="rpu.async_.specific" href="async_/specific.html">rpu.async_.specific</a></code></li>
+<li><code><a title="rpu.async_.iterables" href="async_/iterables.html">rpu.async_.iterables</a></code></li>
+</ul>
 <p><strong>Bug Fixes</strong></p>
 <ul>
 <li>Fixed bug where default help cmd in cli would not show description if brief was an empty string</li>
+<li>Fixed bug where pylance would yell at you when chunking</li>
 </ul>
 <h2 id="001">0.0.1</h2>
 <p><strong>Breaking Changes</strong></p>
