@@ -34,7 +34,7 @@
 <dl>
 <dt id="rpu.cli.Command"><code class="flex name class">
 <span>class <span class="ident">Command</span></span>
-<span>(</span><span>*, name: str, description: str, brief: str, callback: Callable, aliases: Optional[list[str]] = None)</span>
+<span>(</span><span>*, name: str, description: str, brief: str, callback: Callable, aliases: Optional[list[str]] = ...)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates a command object</p>
@@ -70,7 +70,7 @@
 </dd>
 <dt id="rpu.cli.ConsoleClient"><code class="flex name class">
 <span>class <span class="ident">ConsoleClient</span></span>
-<span>(</span><span>*, help_command: Optional[<a title="rpu.cli.Command" href="#rpu.cli.Command">Command</a>] = None)</span>
+<span>(</span><span>*, help_command: Optional[<a title="rpu.cli.Command" href="#rpu.cli.Command">Command</a>] = ...)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates a CLI console client</p>
@@ -89,7 +89,7 @@
 <h3>Methods</h3>
 <dl>
 <dt id="rpu.cli.ConsoleClient.command"><code class="name flex">
-<span>def <span class="ident">command</span></span>(<span>self, *, name: Optional[str] = None, description: Optional[str] = None, brief: Optional[str] = None, aliases: Optional[list[str]] = None)</span>
+<span>def <span class="ident">command</span></span>(<span>self, *, name: Optional[str] = ..., description: Optional[str] = ..., brief: Optional[str] = ..., aliases: Optional[list[str]] = ...)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>|decorator|</p>

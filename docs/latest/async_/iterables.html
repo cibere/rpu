@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
-<title>rpu API documentation</title>
-<meta name="description" content="Random python utilities …" />
+<title>rpu.async_.iterables API documentation</title>
+<meta name="description" content="" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -19,119 +19,46 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title"><code>rpu</code></h1>
+<h1 class="title">Module <code>rpu.async_.iterables</code></h1>
 </header>
 <section id="section-intro">
-
-<p><strong>R</strong>andom <strong>P</strong>ython <strong>U</strong>tilities is a library that contains stuff that (I know I) and you probably are tired of adding to all of your projects. But with rpu you can just add it as a requirement and no more copy pasting! Main benefit of using rpu over copy pasting is that if there is a bug found with the code, instead of having to fix it in all of your projects it can just be fixed in the library and then its fixed for everyone.</p>
-
-<h2 id="key-features">Key Features</h2>
-<h3 id="grammar">Grammar</h3>
-<ul>
-<li>Plural</li>
-<li>possessive</li>
-</ul>
-<h3 id="iterables">Iterables</h3>
-<ul>
-<li>chunk</li>
-<li>get</li>
-</ul>
-<h3 id="async">async</h3>
-<ul>
-<li>run_in_exectuor</li>
-</ul>
-<h3 id="cli">CLI</h3>
-<ul>
-<li>command infrustructure</li>
-</ul>
-<h1 id="installation">Installation</h1>
-<p>★ Python 3.8+ is required</p>
-<p>Installing from pip</p>
-<pre><code class="language-bash">pip install -U rpu
-</code></pre>
-<p>Installing from source</p>
-<pre><code class="language-bash">py -m pip install -U git+https://github.com/cibere/rpu # requires git to be installed
-</code></pre>
-<h1 id="getting-help">Getting Help</h1>
-<ul>
-<li>The <a href="https://discord.gg/pP4mKKbRvk">discord server</a> is always a good place to start.</li>
-<li>Through <a href="https://github.com/cibere/rpu/discussions">Github Discussions</a> Before creating a post, consider reading <a href="https://github.com/cibere/rpu/discussions/1">The discussion guidelines</a></li>
-</ul>
-<h1 id="documentation-versions">Documentation Versions</h1>
-<p>There are currently two versions of the documentation being hosted.</p>
-<ul>
-<li><a href="https://rpu.cibere.dev/stable/index">Stable</a></li>
-<li><a href="https://rpu.cibere.dev/latest/index">Latest</a></li>
-</ul>
-<p>Stable is the version that is on PYPI, while latest is the alpha/beta version on github</p>
-<h1 id="examples">Examples</h1>
-<p>This library's github repository has a wide collection of examples.
-I try to have an example for basically everything inside the library.
-The examples can be <a href="https://github.com/cibere/rpu/tree/main/examples">found here</a></p>
-<h1 id="cli-commands">CLI Commands</h1>
-<ul>
-<li>help: shows this menu</li>
-<li>version: gives you the version of rpu your using</li>
-<li>docs: opens rpus docs</li>
-<li>system-info: gives you system info</li>
-</ul>
-<p>To run a command, simply run <code>py -m rpu &lt;command name&gt;</code></p>
-<h1 id="update-log">Update Log</h1>
-<h2 id="002-so-far">0.0.2 (so far)</h2>
-<p><strong>Breaking Changes</strong></p>
-<ul>
-<li><code>name</code>, <code>description</code>, and <code>brief</code> in <code><a title="rpu.cli.ConsoleClient" href="cli.html#rpu.cli.ConsoleClient">ConsoleClient</a></code> are not optional. If <code>name</code> is not given, it will be the functions name. If <code>description</code> is not given, it will be the commands docstring.</li>
-</ul>
-<p><strong>Additions</strong></p>
-<p>None</p>
-<p><strong>Bug Fixes</strong></p>
-<ul>
-<li>Fixed bug where default help cmd in cli would not show description if brief was an empty string</li>
-</ul>
-<h2 id="001">0.0.1</h2>
-<p><strong>Breaking Changes</strong></p>
-<p>None</p>
-<p><strong>Additions</strong></p>
-<ul>
-<li><code><a title="rpu.grammar" href="grammar.html">rpu.grammar</a></code></li>
-<li><code><a title="rpu.async_" href="async_/index.html">rpu.async_</a></code></li>
-<li><code><a title="rpu.iterables" href="iterables.html">rpu.iterables</a></code></li>
-<li>docs</li>
-<li><code><a title="rpu.cli" href="cli.html">rpu.cli</a></code></li>
-<li>CLI commands</li>
-</ul>
-<p><strong>Bug Fixes</strong></p>
-<p>None</p>
 </section>
 <section>
-<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
-<dt><code class="name"><a title="rpu.async_" href="async_/index.html">rpu.async_</a></code></dt>
+<dt id="rpu.async_.iterables.chunk"><code class="name flex">
+<span>async def <span class="ident">chunk</span></span>(<span>iterable: AsyncIterable, max_size: int) ‑> AsyncIterable[list[Any]]</span>
+</code></dt>
 <dd>
-<div class="desc"><p>Async specific utils
-And async versions</p></div>
+<div class="desc"><p>|async-iterable|</p>
+<p>Chunks the given iterable into chunks of the given size</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>iterable</code></strong> :&ensp;<code>typing.AsyncIterable</code></dt>
+<dd>The iterable you want to chunk</dd>
+<dt><strong><code>max_size</code></strong> :&ensp;<code>int</code></dt>
+<dd>the max size of the chunks</dd>
+</dl></div>
 </dd>
-<dt><code class="name"><a title="rpu.cli" href="cli.html">rpu.cli</a></code></dt>
+<dt id="rpu.async_.iterables.get"><code class="name flex">
+<span>async def <span class="ident">get</span></span>(<span>iterable: AsyncIterable, /, **attrs: Any) ‑> Optional[Any]</span>
+</code></dt>
 <dd>
-<div class="desc"></div>
-</dd>
-<dt><code class="name"><a title="rpu.consts" href="consts.html">rpu.consts</a></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-<dt><code class="name"><a title="rpu.grammar" href="grammar.html">rpu.grammar</a></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-<dt><code class="name"><a title="rpu.iterables" href="iterables.html">rpu.iterables</a></code></dt>
-<dd>
-<div class="desc"></div>
+<div class="desc"><p>|coro|</p>
+<p>Gets an item from the given iterable with sertain attributes</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>iterable</code></strong> :&ensp;<code>typing.AsyncIterable</code></dt>
+<dd>The item you want to be iterated through</dd>
+<dt><strong><code>**attrs</code></strong> :&ensp;<code>typing.Any</code></dt>
+<dd>The attribute(s) to check for</dd>
+</dl></div>
 </dd>
 </dl>
-</section>
-<section>
-</section>
-<section>
 </section>
 <section>
 </section>
@@ -139,37 +66,18 @@ And async versions</p></div>
 <nav id="sidebar">
 <h1>Index</h1>
 <div class="toc">
-<ul>
-<li><a href="#rpu">RPU</a><ul>
-<li><a href="#key-features">Key Features</a><ul>
-<li><a href="#grammar">Grammar</a></li>
-<li><a href="#iterables">Iterables</a></li>
-<li><a href="#async">async</a></li>
-<li><a href="#cli">CLI</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#getting-help">Getting Help</a></li>
-<li><a href="#documentation-versions">Documentation Versions</a></li>
-<li><a href="#examples">Examples</a></li>
-<li><a href="#cli-commands">CLI Commands</a></li>
-<li><a href="#update-log">Update Log</a><ul>
-<li><a href="#002-so-far">0.0.2 (so far)</a></li>
-<li><a href="#001">0.0.1</a></li>
-</ul>
-</li>
-</ul>
+<ul></ul>
 </div>
 <ul id="index">
-<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<li><h3>Super-module</h3>
 <ul>
-<li><code><a title="rpu.async_" href="async_/index.html">rpu.async_</a></code></li>
-<li><code><a title="rpu.cli" href="cli.html">rpu.cli</a></code></li>
-<li><code><a title="rpu.consts" href="consts.html">rpu.consts</a></code></li>
-<li><code><a title="rpu.grammar" href="grammar.html">rpu.grammar</a></code></li>
-<li><code><a title="rpu.iterables" href="iterables.html">rpu.iterables</a></code></li>
+<li><code><a title="rpu.async_" href="index.html">rpu.async_</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="rpu.async_.iterables.chunk" href="#rpu.async_.iterables.chunk">chunk</a></code></li>
+<li><code><a title="rpu.async_.iterables.get" href="#rpu.async_.iterables.get">get</a></code></li>
 </ul>
 </li>
 </ul>

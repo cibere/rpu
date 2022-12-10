@@ -31,28 +31,27 @@
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="rpu.iterables.chunk"><code class="name flex">
-<span>def <span class="ident">chunk</span></span>(<span>iterable: Union[AsyncIterable, Iterable], max_size: int) ‑> Union[AsyncIterable, Iterable]</span>
+<span>def <span class="ident">chunk</span></span>(<span>iterable: Iterable, max_size: int) ‑> Iterable[list[Any]]</span>
 </code></dt>
 <dd>
-<div class="desc"><p>|awaitable|</p>
+<div class="desc"><p>|iterable|</p>
 <p>Chunks the given iterable into chunks of the given size</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
-<dt><strong><code>iterable</code></strong> :&ensp;<code>Union[</code>typing.AsyncIterable<code>, </code>typing.Iterable<code>]</code></dt>
+<dt><strong><code>iterable</code></strong> :&ensp;<code>typing.Iterable</code></dt>
 <dd>The iterable you want to chunk</dd>
 <dt><strong><code>max_size</code></strong> :&ensp;<code>int</code></dt>
 <dd>the max size of the chunks</dd>
 </dl></div>
 </dd>
 <dt id="rpu.iterables.get"><code class="name flex">
-<span>def <span class="ident">get</span></span>(<span>iterable: Union[AsyncIterable, Iterable], /, **attrs: Any) ‑> Optional[Any]</span>
+<span>def <span class="ident">get</span></span>(<span>iterable: Iterable, /, **attrs: Any) ‑> Optional[Any]</span>
 </code></dt>
 <dd>
-<div class="desc"><p>|awaitable|</p>
-<p>Gets an item from the given iterable with sertain attributes</p>
+<div class="desc"><p>Gets an item from the given iterable with sertain attributes</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
-<dt><strong><code>iterable</code></strong> :&ensp;<code>Union[</code>typing.AsyncIterable<code>, </code>typing.Iterable<code>]</code></dt>
+<dt><strong><code>iterable</code></strong> :&ensp;<code>typing.Iterable</code></dt>
 <dd>The item you want to be iterated through</dd>
 <dt><strong><code>**attrs</code></strong> :&ensp;<code>typing.Any</code></dt>
 <dd>The attribute(s) to check for</dd>
