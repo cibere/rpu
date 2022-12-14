@@ -12,6 +12,7 @@
 - `rpu.consts`
 - `rpu.async_.specific`
 - `rpu.async_.iterables`
+- `rpu.grammar.ordinal`
 
 **Bug Fixes**
 

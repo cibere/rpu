@@ -1,6 +1,6 @@
 from typing import Union
 
-__all__ = ["Plural", "possessive"]
+__all__ = ["Plural", "possessive", "ordinal"]
 
 
 class Plural:
@@ -46,3 +46,28 @@ def possessive(text: str) -> str:
         text += "'s"
 
     return text
+
+
+def ordinal(number: int) -> str:
+    """Returns the ordinal version of a number
+
+    Parameters
+    ----------
+    number: `int`
+        the number to be turned ordinal
+
+    Returns
+    ----------
+    str
+        the ordinal version
+
+    Examples
+    ----------
+    >>> ordinal(5)
+    ... 5th
+
+    >>> ordinal(2)
+    ... 2nd
+    """
+
+    return f"{number}{'tsnrhtdd'[(number//10%10!=1)*(number%10<4)*number%10::4]}"
