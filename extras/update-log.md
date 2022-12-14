@@ -1,6 +1,6 @@
 # Update Log
 
-## 0.0.2 (so far)
+## 0.0.2
 
 **Breaking Changes**
 
