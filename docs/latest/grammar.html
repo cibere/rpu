@@ -30,6 +30,29 @@
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
+<dt id="rpu.grammar.ordinal"><code class="name flex">
+<span>def <span class="ident">ordinal</span></span>(<span>number: int) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the ordinal version of a number</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>number</code></strong> :&ensp;<code>int</code></dt>
+<dd>the number to be turned ordinal</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>the ordinal version</dd>
+</dl>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; ordinal(5)
+... 5th
+</code></pre>
+<pre><code class="language-python-repl">&gt;&gt;&gt; ordinal(2)
+... 2nd
+</code></pre></div>
+</dd>
 <dt id="rpu.grammar.possessive"><code class="name flex">
 <span>def <span class="ident">possessive</span></span>(<span>text: str) ‑> str</span>
 </code></dt>
@@ -81,6 +104,7 @@
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
+<li><code><a title="rpu.grammar.ordinal" href="#rpu.grammar.ordinal">ordinal</a></code></li>
 <li><code><a title="rpu.grammar.possessive" href="#rpu.grammar.possessive">possessive</a></code></li>
 </ul>
 </li>
