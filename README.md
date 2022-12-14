@@ -10,6 +10,7 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 
 - Plural
 - possessive
+- ordinal
 
 ### Iterables
 
@@ -23,3 +24,7 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 ### CLI
 
 - command infrustructure
+
+### Consts
+
+- MISSING
