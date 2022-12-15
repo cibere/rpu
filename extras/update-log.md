@@ -11,6 +11,7 @@
 
 - Added TypeVars to `rpu.async_.iterables` and `rpu.iterables`
 - `rpu.grammar.int_to_word`
+- `rpu.dicts`
 
 **Bug Fixes**
 
