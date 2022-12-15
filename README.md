@@ -11,6 +11,7 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 - Plural
 - possessive
 - ordinal
+- int_to_word
 
 ### Iterables
 
