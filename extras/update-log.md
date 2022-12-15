@@ -1,5 +1,19 @@
 # Update Log
 
+## 0.0.3 (so far)
+
+**Breaking Changes**
+
+- Support for python `3.8` has been dropped
+
+**Additions**
+
+- Added TypeVars to `rpu.async_.iterables` and `rpu.iterables`
+
+**Bug Fixes**
+
+None
+
 ## 0.0.2
 
 **Breaking Changes**
