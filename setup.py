@@ -19,7 +19,7 @@ setuptools.setup(
         "Discord/Support Server": "https://discord.gg/2MRrJvP42N",
     },
     version=rpu.__version__,
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     install_requires=REQUIREMENTS,
     packages=["rpu"],
     description=rpu.__description__,
