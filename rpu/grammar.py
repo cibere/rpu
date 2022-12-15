@@ -12,6 +12,10 @@ class Plural:
         num: Union[`int`, `float`]
             the number you want to use for getting the plural of text
 
+        Notes
+        ----------
+            Is this giving an incorrect plural version? Create an issue on the github repo (or PR it yourself :D)
+
         Useage
         ----------
         Example: `Plural(5):the_text` -> `5 the_texts`
