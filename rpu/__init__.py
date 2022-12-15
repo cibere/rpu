@@ -13,6 +13,7 @@ from typing import Literal, NamedTuple
 
 from .async_ import *
 from .cli import *
+from .dicts import *
 from .grammar import *
 from .iterables import *
 
