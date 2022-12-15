@@ -31,7 +31,7 @@
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="rpu.async_.iterables.chunk"><code class="name flex">
-<span>async def <span class="ident">chunk</span></span>(<span>iterable: AsyncIterable, max_size: int) ‑> AsyncIterable[list[Any]]</span>
+<span>async def <span class="ident">chunk</span></span>(<span>iterable: AsyncIterable[~T], max_size: int) ‑> AsyncIterable[list[~T]]</span>
 </code></dt>
 <dd>
 <div class="desc"><p>|async-iterable|</p>
@@ -42,10 +42,13 @@
 <dd>The iterable you want to chunk</dd>
 <dt><strong><code>max_size</code></strong> :&ensp;<code>int</code></dt>
 <dd>the max size of the chunks</dd>
-</dl></div>
+</dl>
+<h2 id="notes">Notes</h2>
+<pre><code>If the given iterable is sync, use &lt;code&gt;&lt;a title="rpu.iterables.chunk" href="../iterables.html#rpu.iterables.chunk"&gt;chunk()&lt;/a&gt;&lt;/code&gt; instead
+</code></pre></div>
 </dd>
 <dt id="rpu.async_.iterables.get"><code class="name flex">
-<span>async def <span class="ident">get</span></span>(<span>iterable: AsyncIterable, /, **attrs: Any) ‑> Any</span>
+<span>async def <span class="ident">get</span></span>(<span>iterable: AsyncIterable[~T], /, **attrs: Any) ‑> Optional[~T]</span>
 </code></dt>
 <dd>
 <div class="desc"><p>|coro|</p>
@@ -56,7 +59,10 @@
 <dd>The item you want to be iterated through</dd>
 <dt><strong><code>**attrs</code></strong> :&ensp;<code>typing.Any</code></dt>
 <dd>The attribute(s) to check for</dd>
-</dl></div>
+</dl>
+<h2 id="notes">Notes</h2>
+<pre><code>If the given iterable is sync, use &lt;code&gt;&lt;a title="rpu.iterables.get" href="../iterables.html#rpu.iterables.get"&gt;get()&lt;/a&gt;&lt;/code&gt; instead
+</code></pre></div>
 </dd>
 </dl>
 </section>
