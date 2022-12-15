@@ -16,6 +16,7 @@ from .cli import *
 from .dicts import *
 from .grammar import *
 from .iterables import *
+from .numbers import *
 
 
 class VersionInfo(NamedTuple):
