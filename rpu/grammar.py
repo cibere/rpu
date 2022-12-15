@@ -4,7 +4,7 @@ __all__ = ["Plural", "possessive", "ordinal"]
 
 
 class Plural:
-    def __init__(self, num: Union[int, float]):
+    def __init__(self, num: Union[int, float], /):
         """Returns the plural version of the given text
 
         Parameters
@@ -30,7 +30,7 @@ class Plural:
         return f"{self.num} {text}"
 
 
-def possessive(text: str) -> str:
+def possessive(text: str, /) -> str:
     """Returns the possessive version of the given text
 
     Parameters
@@ -52,7 +52,7 @@ def possessive(text: str) -> str:
     return text
 
 
-def ordinal(number: int) -> str:
+def ordinal(number: int, /) -> str:
     """Returns the ordinal version of a number
 
     Parameters
@@ -77,7 +77,7 @@ def ordinal(number: int) -> str:
     return f"{number}{'tsnrhtdd'[(number//10%10!=1)*(number%10<4)*number%10::4]}"
 
 
-def int_to_word(number: int) -> str:
+def int_to_word(number: int, /) -> str:
     """Returns the word version of an integer
 
     Parameters
