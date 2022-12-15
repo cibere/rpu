@@ -1,9 +1,10 @@
-from typing import Any, Iterable, Optional
+from typing import Any, Iterable, Optional, TypeVar
 
 __all__ = ["chunk", "get"]
+T = TypeVar("T")
 
 
-def chunk(iterable: Iterable, max_size: int) -> Iterable[list[Any]]:
+def chunk(iterable: Iterable[T], max_size: int) -> Iterable[list[T]]:
     """|iterable|
 
     Chunks the given iterable into chunks of the given size
@@ -14,6 +15,10 @@ def chunk(iterable: Iterable, max_size: int) -> Iterable[list[Any]]:
         The iterable you want to chunk
     max_size: `int`
         the max size of the chunks
+
+    Notes
+    ----------
+        If the given iterable is async, use `rpu.async_.iterables.chunk` instead
     """
 
     if max_size <= 0:
@@ -35,7 +40,7 @@ def chunk(iterable: Iterable, max_size: int) -> Iterable[list[Any]]:
         yield final
 
 
-def get(iterable: Iterable, /, **attrs: Any) -> Any:
+def get(iterable: Iterable[T], /, **attrs: Any) -> Optional[T]:
     """Gets an item from the given iterable with sertain attributes
 
     Parameters
@@ -44,6 +49,10 @@ def get(iterable: Iterable, /, **attrs: Any) -> Any:
         The item you want to be iterated through
     **attrs: `typing.Any`
         The attribute(s) to check for
+
+    Notes
+    ----------
+        If the given iterable is async, use `rpu.async_.iterables.get` instead
     """
 
     for item in iterable:
