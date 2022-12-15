@@ -1,6 +1,6 @@
 # Installation
 
-★ Python 3.8+ is required
+★ Python 3.9+ is required
 
 Installing from pip
 
