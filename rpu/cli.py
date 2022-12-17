@@ -102,11 +102,11 @@ CLI Arguments
         if cmd.description:
             print(f"""Description:\n     {cmd.description}""")
 
-    def callback(self, cmd: Optional[str] = MISSING):
+    def callback(self, cmd: str = MISSING):
         if cmd is MISSING:
             self.show_commands()
         else:
-            self.show_command(str(cmd))
+            self.show_command(cmd)
 
 
 class ConsoleClient:
