@@ -41,8 +41,12 @@ def cmd_docs():
 def cmd_system_info():
     info = {}
 
-    info["ciberedev.py"] = rpu.__version__
-    info["python"] = sys.version.split(" ")[0]
+    info["python"] = "v{0.major}.{0.minor}.{0.micro}-{0.releaselevel}".format(
+        sys.version_info
+    )
+    info["rpu"] = "v{0.major}.{0.minor}.{0.micro}-{0.releaselevel}".format(
+        rpu.version_info
+    )
     info["OS"] = platform.platform()
 
     nl = "\n"
