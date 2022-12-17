@@ -88,6 +88,7 @@ CLI Arguments
     def show_command(self, cmd_name: str):
         found_cmds = [cmd for cmd in self.client.commands if cmd_name in cmd.exes]
         if len(found_cmds) == 0:
+            print(":show")
             self.client.dispatch("command_not_found", cmd_name)
             return
         else:
@@ -102,10 +103,10 @@ CLI Arguments
             print(f"""Description:\n     {cmd.description}""")
 
     def callback(self, cmd: Optional[str] = MISSING):
-        if cmd is None:
+        if cmd is MISSING:
             self.show_commands()
         else:
-            self.show_command(cmd)
+            self.show_command(str(cmd))
 
 
 class ConsoleClient:
