@@ -15,7 +15,7 @@
 
 **Bug Fixes**
 
-None
+- Fixed bug where CLI command always returned cmd not found
 
 ## 0.0.2
 
