@@ -16,6 +16,7 @@
 **Bug Fixes**
 
 - Fixed bug where CLI command always returned cmd not found
+- fixed bug where pylance yelled at `rpu.cli`
 
 ## 0.0.2
 
