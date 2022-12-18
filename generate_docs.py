@@ -55,6 +55,25 @@ TO_REMOVE = [
     """<p>Random python utilities</p>
 <h1 id="rpu">RPU</h1>""",
     """<p>Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev/stable/index.html">stable docs here</a>, and <a href="https://rpu.cibere.dev/latest/index.html">latest docs here</a></p>""",
+    """<h3>Instance variables</h3>
+<dl>
+<dt id="rpu.http.Route.endpoint"><code class="name">var <span class="ident">endpoint</span></code></dt>
+<dd>
+<div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
+</dd>
+<dt id="rpu.http.Route.headers"><code class="name">var <span class="ident">headers</span></code></dt>
+<dd>
+<div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
+</dd>
+<dt id="rpu.http.Route.method"><code class="name">var <span class="ident">method</span></code></dt>
+<dd>
+<div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
+</dd>
+<dt id="rpu.http.Route.query_params"><code class="name">var <span class="ident">query_params</span></code></dt>
+<dd>
+<div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
+</dd>
+</dl>""",
 ]
 
 
