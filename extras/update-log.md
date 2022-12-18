@@ -12,6 +12,7 @@
 - Added TypeVars to `rpu.async_.iterables` and `rpu.iterables`
 - `rpu.numbers`
 - `rpu.dicts`
+- `rpu.http`
 
 **Bug Fixes**
 

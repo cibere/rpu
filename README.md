@@ -37,3 +37,9 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 ### Dicts
 
 - flip_dict
+
+### HTTP
+
+- QueryParams
+- Headers
+- Route
