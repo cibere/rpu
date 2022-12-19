@@ -1,4 +1,4 @@
-from rpu.iterables import chunk, get
+from rpu.iterables import chunk
 
 # creating a raw list to chunk
 before = [
