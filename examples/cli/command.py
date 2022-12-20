@@ -1,4 +1,4 @@
-from rpu import ConsoleClient
+from rpu.cli import ConsoleClient
 
 # creating our client instance.
 # It also accepts a `help_command` argument, though it is optional
