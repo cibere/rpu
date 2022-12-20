@@ -24,7 +24,8 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 
 ### async
 
-- run_in_exectuor
+- run_in_executor
+- execute_func
 
 ### CLI
 

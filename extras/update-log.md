@@ -14,6 +14,7 @@
 - `rpu.dicts`
 - `rpu.http`
 - `rpu.objects`
+- `rpu.async_.specific.execute_func`
 
 **Bug Fixes**
 
