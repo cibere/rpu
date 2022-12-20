@@ -11,13 +11,6 @@ __version__ = "0.0.3a"
 
 from typing import Literal, NamedTuple
 
-from .async_ import *
-from .cli import *
-from .dicts import *
-from .grammar import *
-from .iterables import *
-from .numbers import *
-
 
 class VersionInfo(NamedTuple):
     major: int
