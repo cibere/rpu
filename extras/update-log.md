@@ -13,6 +13,7 @@
 - `rpu.numbers`
 - `rpu.dicts`
 - `rpu.http`
+- `rpu.objects`
 
 **Bug Fixes**
 

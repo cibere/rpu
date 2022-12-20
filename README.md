@@ -43,3 +43,7 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 - QueryParams
 - Headers
 - Route
+
+### Objects
+
+- Object
