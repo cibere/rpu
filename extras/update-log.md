@@ -5,7 +5,7 @@
 **Breaking Changes**
 
 - Support for python `3.8` has been dropped
-- The `text/number` arg in `rpu.grammar.Plural`, `rpu.grammar.possessive`, `rpu.grammar.ordinal`, and `rpu.grammar.int_to_word` is now positional only
+- The `text/number` arg in `rpu.grammar.Plural`, `rpu.grammar.possessive`, `rpu.grammar.ordinal`, and `rpu.numbers.int_to_word` is now positional only
 
 **Additions**
 
