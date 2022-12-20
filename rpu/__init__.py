@@ -4,6 +4,7 @@ Random python utilities
 .. include:: ../README.md
 .. include:: ../extras/index-page.md
 .. include:: ../extras/update-log.md
+.. include:: ../extras/credits.md
 """
 
 __description__ = "Random python utilities"

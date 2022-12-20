@@ -48,3 +48,7 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 ### Objects
 
 - Object
+
+# Credits
+
+You can view the credits <a href="https://github.com/cibere/rpu/blob/main/extras/credits.md">here</a>

@@ -74,6 +74,8 @@ TO_REMOVE = [
 <div class="desc"><p>Return an attribute of instance, which is of type owner.</p></div>
 </dd>
 </dl>""",
+    """<h1 id="credits">Credits</h1>
+<p>You can view the credits <a href="https://github.com/cibere/rpu/blob/main/extras/credits.md">here</a></p>""",
 ]
 
 
