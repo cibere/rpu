@@ -1,3 +1,7 @@
+"""
+.. include:: ../extras/consts.md
+"""
+
 from typing import Any
 
 __all__ = ["MISSING"]
