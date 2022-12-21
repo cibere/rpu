@@ -15,6 +15,7 @@
 - `rpu.http`
 - `rpu.objects`
 - `rpu.async_.specific.execute_func`
+- `rpu.chars`
 
 **Bug Fixes**
 
