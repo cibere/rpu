@@ -40,7 +40,7 @@ args = Namespace(
 )
 pdoc.cli.main(args)
 
-MODULES_TO_REMOVE = []
+MODULES_TO_REMOVE = ["librarys/index.html"]
 LATEST_DOCS_PATH = "docs/latest"
 
 if not os.path.exists(LATEST_DOCS_PATH):

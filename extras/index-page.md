@@ -40,5 +40,8 @@ The examples can be <a href="https://github.com/cibere/rpu/tree/main/examples">f
 - version: gives you the version of rpu your using
 - docs: opens rpus docs
 - system-info: gives you system info
+- install: lets you install library specific utilities
+- uninstall: lets you uninstall library specific utilities
+- upload: lets you upload library specific utitilities to the server for others to install and use
 
 To run a command, simply run `py -m rpu <command name>`

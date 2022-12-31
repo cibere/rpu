@@ -6,6 +6,10 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 
 ## Key Features
 
+### Custom Extenstions for library specific utilities
+
+For this, you can use the CLI commands `install` and `uninstall` to install utilities, and uninstall utilities. You can also use the `upload` command to upload utilities to the server for others to use.
+
 ### Grammar
 
 - Plural
