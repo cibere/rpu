@@ -13,6 +13,7 @@ from .cli import ConsoleClient
 client = ConsoleClient()
 
 API_BASE_URL = "https://api.cibere.dev/rpu"
+BASE_URL = rpu.__file__.removesuffix("__init__.py")
 
 
 @client.command(
@@ -65,7 +66,7 @@ def cmd_system_info():
     brief="lets you install library specific utilities",
 )
 def cmd_install(library_name: str):
-    if os.path.isfile(f"rpu/librarys/_{library_name}.py"):
+    if os.path.isfile(f"{BASE_URL}/librarys/_{library_name}.py"):
         return print(f"Utilities for {library_name} already installed")
 
     res = requests.get(f"{API_BASE_URL}/get/{library_name}")
@@ -78,11 +79,11 @@ def cmd_install(library_name: str):
     if res.status_code == 400:
         return print(data["error"])
 
-    with open(f"rpu/librarys/_{library_name}.py", "w") as f:
+    with open(f"{BASE_URL}/librarys/_{library_name}.py", "w") as f:
         f.write(data["code"])
     print("Done creating file")
 
-    with open(f"rpu/librarys/__init__.py", "a") as f:
+    with open(f"{BASE_URL}/librarys/__init__.py", "a") as f:
         f.write(f"from . import _{library_name} as {library_name}\n")
     print("Done updating init")
     print(f"\nSuccessfully finished installing utilities for {library_name}.")
@@ -94,40 +95,20 @@ def cmd_install(library_name: str):
     brief="lets you uninstall library specific utilities",
 )
 def cmd_uninstall(library_name: str):
-    fp = f"rpu/librarys/_{library_name}.py"
+    fp = f"{BASE_URL}/librarys/_{library_name}.py"
     if not os.path.isfile(fp):
         return print(f"No utilities for {library_name} installed")
 
     os.remove(fp)
     print("Removed file")
 
-    with open(f"rpu/librarys/__init__.py", "r") as f:
+    with open(f"{BASE_URL}/librarys/__init__.py", "r") as f:
         foo = f.read()
     foo = foo.replace(f"from . import _{library_name} as {library_name}", "")
-    with open(f"rpu/librarys/__init__.py", "w") as f:
+    with open(f"{BASE_URL}/librarys/__init__.py", "w") as f:
         f.write(foo.strip())
     print("Updated init")
     print(f"\nSuccessfully finished uninstalling utilities for {library_name}.")
-
-
-@client.command(
-    name="upload",
-    description="lets you upload library specific utitilities to the server for others to install and use",
-)
-def cmd_upload(library_name: str, file_with_code: str):
-    with open(file_with_code, "r") as f:
-        code = f.read()
-
-    res = requests.post(
-        "https://api.cibere.dev/rpu/upload",
-        json={"name": library_name, "code": code},
-        headers={"Content-Type": "application/json"},
-    )
-    data = res.json()
-    if res.status_code == 400:
-        print(data["error"])
-    else:
-        print("Successfully uploaded")
 
 
 client.run()
