@@ -21,7 +21,7 @@ setuptools.setup(
     version=rpu.__version__,
     python_requires=">=3.9",
     install_requires=REQUIREMENTS,
-    packages=["rpu"],
+    packages=["rpu", "rpu.librarys"],
     description=rpu.__description__,
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
