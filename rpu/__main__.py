@@ -66,7 +66,7 @@ def cmd_system_info():
     brief="lets you install library specific utilities",
 )
 def cmd_install(library_name: str):
-    if os.path.isfile(f"{BASE_URL}/librarys/_{library_name}.py"):
+    if os.path.isfile(f"{BASE_URL}librarys\\_{library_name}.py"):
         return print(f"Utilities for {library_name} already installed")
 
     res = requests.get(f"{API_BASE_URL}/get/{library_name}")
@@ -79,11 +79,11 @@ def cmd_install(library_name: str):
     if res.status_code == 400:
         return print(data["error"])
 
-    with open(f"{BASE_URL}/librarys/_{library_name}.py", "w") as f:
+    with open(f"{BASE_URL}librarys\\_{library_name}.py", "w") as f:
         f.write(data["code"])
     print("Done creating file")
 
-    with open(f"{BASE_URL}/librarys/__init__.py", "a") as f:
+    with open(f"{BASE_URL}librarys\\__init__.py", "a") as f:
         f.write(f"from . import _{library_name} as {library_name}\n")
     print("Done updating init")
     print(f"\nSuccessfully finished installing utilities for {library_name}.")
@@ -95,17 +95,17 @@ def cmd_install(library_name: str):
     brief="lets you uninstall library specific utilities",
 )
 def cmd_uninstall(library_name: str):
-    fp = f"{BASE_URL}/librarys/_{library_name}.py"
+    fp = f"{BASE_URL}librarys\\_{library_name}.py"
     if not os.path.isfile(fp):
         return print(f"No utilities for {library_name} installed")
 
     os.remove(fp)
     print("Removed file")
 
-    with open(f"{BASE_URL}/librarys/__init__.py", "r") as f:
+    with open(f"{BASE_URL}librarys\\__init__.py", "r") as f:
         foo = f.read()
     foo = foo.replace(f"from . import _{library_name} as {library_name}", "")
-    with open(f"{BASE_URL}/librarys/__init__.py", "w") as f:
+    with open(f"{BASE_URL}librarys\\__init__.py", "w") as f:
         f.write(foo.strip())
     print("Updated init")
     print(f"\nSuccessfully finished uninstalling utilities for {library_name}.")
