@@ -1,33 +1,32 @@
 from typing import Union
 
-__all__ = ["Plural", "possessive", "ordinal"]
+__all__ = ["make_plural", "possessive", "ordinal"]
 
 
-class Plural:
-    def __init__(self, num: Union[int, float], /):
-        """Returns the plural version of the given text
+def make_plural(num: Union[int, float], /, text: str) -> str:
+    """Returns the plural version of the given text
 
-        Parameters
-        ----------
-        num: Union[`int`, `float`]
-            the number you want to use for getting the plural of text
+    Parameters
+    ----------
+    num: Union[`int`, `float`]
+        the number you want to use for getting the plural of text
+    text: str
+        the text to become plural
 
-        Notes
-        ----------
-            Is this giving an incorrect plural version? Create an issue on the github repo (or PR it yourself :D)
+    Notes
+    ----------
+        Is this giving an incorrect plural version? Create an issue on the github repo (or PR it yourself :D)
 
-        Useage
-        ----------
-        Example: `Plural(5):the_text` -> `5 the_texts`
-        """
+    Returns
+    ----------
+    str
+        the plural version
+    """
 
-        self.num = num
+    if abs(num) != 1:
+        text += "s"
 
-    def __format__(self, text: str) -> str:
-        if abs(self.num) != 1:
-            text += "s"
-
-        return f"{self.num} {text}"
+    return f"{num} {text}"
 
 
 def possessive(text: str, /) -> str:
