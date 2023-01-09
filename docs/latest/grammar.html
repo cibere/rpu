@@ -30,6 +30,27 @@
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
+<dt id="rpu.grammar.make_plural"><code class="name flex">
+<span>def <span class="ident">make_plural</span></span>(<span>num: Union[int, float], /, text: str) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the plural version of the given text</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>num</code></strong> :&ensp;<code>Union[</code>int<code>, </code>float<code>]</code></dt>
+<dd>the number you want to use for getting the plural of text</dd>
+<dt><strong><code>text</code></strong> :&ensp;<code>str</code></dt>
+<dd>the text to become plural</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<pre><code>Is this giving an incorrect plural version? Create an issue on the github repo (or PR it yourself :D)
+</code></pre>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>the plural version</dd>
+</dl></div>
+</dd>
 <dt id="rpu.grammar.ordinal"><code class="name flex">
 <span>def <span class="ident">ordinal</span></span>(<span>number: int, /) ‑> str</span>
 </code></dt>
@@ -72,26 +93,6 @@
 </dl>
 </section>
 <section>
-<h2 class="section-title" id="header-classes">Classes</h2>
-<dl>
-<dt id="rpu.grammar.Plural"><code class="flex name class">
-<span>class <span class="ident">Plural</span></span>
-<span>(</span><span>num: Union[int, float], /)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Returns the plural version of the given text</p>
-<h2 id="parameters">Parameters</h2>
-<dl>
-<dt><strong><code>num</code></strong> :&ensp;<code>Union[</code>int<code>, </code>float<code>]</code></dt>
-<dd>the number you want to use for getting the plural of text</dd>
-</dl>
-<h2 id="notes">Notes</h2>
-<pre><code>Is this giving an incorrect plural version? Create an issue on the github repo (or PR it yourself :D)
-</code></pre>
-<h2 id="useage">Useage</h2>
-<p>Example: <code>Plural(5):the_text</code> -&gt; <code>5 the_texts</code></p></div>
-</dd>
-</dl>
 </section>
 </article>
 <nav id="sidebar">
@@ -107,15 +108,9 @@
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
+<li><code><a title="rpu.grammar.make_plural" href="#rpu.grammar.make_plural">make_plural</a></code></li>
 <li><code><a title="rpu.grammar.ordinal" href="#rpu.grammar.ordinal">ordinal</a></code></li>
 <li><code><a title="rpu.grammar.possessive" href="#rpu.grammar.possessive">possessive</a></code></li>
-</ul>
-</li>
-<li><h3><a href="#header-classes">Classes</a></h3>
-<ul>
-<li>
-<h4><code><a title="rpu.grammar.Plural" href="#rpu.grammar.Plural">Plural</a></code></h4>
-</li>
 </ul>
 </li>
 </ul>
