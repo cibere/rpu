@@ -7,6 +7,7 @@
 - Support for python `3.8` has been dropped
 - The `text/number` arg in `rpu.grammar.Plural`, `rpu.grammar.possessive`, `rpu.grammar.ordinal`, and `rpu.numbers.int_to_word` is now positional only
 - removed `numbers.int_to_word` and `numbers.word_to_int`
+- removed `http.QueryParams`, `http.Headers`
 
 **Additions**
 
