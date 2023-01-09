@@ -18,8 +18,8 @@ For this, you can use the CLI commands `install` and `uninstall` to install util
 
 ### Numbers
 
-- word_to_int
-- int_to_word
+- get_percentage
+- get_percent_of
 
 ### Iterables
 
@@ -45,9 +45,8 @@ For this, you can use the CLI commands `install` and `uninstall` to install util
 
 ### HTTP
 
-- QueryParams
-- Headers
 - Route
+- HTTPCodes
 
 ### Objects
 
