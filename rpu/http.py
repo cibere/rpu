@@ -9,7 +9,7 @@ class Route:
     def __init__(
         self,
         *,
-        method: Literal["POST", "GET"],
+        method: Literal["POST", "GET", "DELETE", "PUT"],
         endpoint: str,
     ):
         """Creates a route instance
