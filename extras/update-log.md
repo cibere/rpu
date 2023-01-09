@@ -8,6 +8,8 @@
 - The `text/number` arg in `rpu.grammar.Plural`, `rpu.grammar.possessive`, `rpu.grammar.ordinal`, and `rpu.numbers.int_to_word` is now positional only
 - removed `numbers.int_to_word` and `numbers.word_to_int`
 - removed `http.QueryParams`, `http.Headers`
+- `rpu.http` is now a folder instead of a file
+- `http.Route` has been moved to `rpu.http.specific.Route`
 
 **Additions**
 
@@ -18,6 +20,7 @@
 - `rpu.objects`
 - `rpu.async_.specific.execute_func`
 - `rpu.chars`
+- `rpu.http.codes.ClientErrorHTTPCodes`, `rpu.http.codes.InfoHTTPCodes`, `rpu.http.codes.RedirectHTTPCodes`, `rpu.http.codes.ServerErrorHTTPCodes`, `rpu.http.codes.SuccessHTTPCodes`, `rpu.http.codes.HTTPCodes`
 
 **Bug Fixes**
 
