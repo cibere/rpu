@@ -1,7 +1,4 @@
-from typing import Literal, Optional
-from urllib.parse import urlencode
-
-from .consts import MISSING
+from typing import Literal
 
 __all__ = ["Route"]
 
