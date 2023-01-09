@@ -8,7 +8,7 @@ Random python utilities
 """
 
 __description__ = "Random python utilities"
-__version__ = "0.0.4a"
+__version__ = "0.0.4"
 
 from typing import Literal, NamedTuple
 
