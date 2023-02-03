@@ -1,5 +1,19 @@
 # Update Log
 
+## 1.1.0
+
+**Breaking Changes**
+
+- Removed built in pypi-like system
+
+**Additions**
+
+None
+
+**Bug Fixes**
+
+None
+
 ## 1.0.0
 
 **Breaking Changes**
