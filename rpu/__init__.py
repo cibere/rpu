@@ -12,7 +12,18 @@ __version__ = "1.1.1a"
 
 from typing import Literal, NamedTuple
 
-from . import chars, cli, consts, dicts, grammar, iterables, numbers, objects
+from . import (
+    async_,
+    chars,
+    cli,
+    consts,
+    dicts,
+    grammar,
+    http,
+    iterables,
+    numbers,
+    objects,
+)
 
 
 class VersionInfo(NamedTuple):
