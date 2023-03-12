@@ -12,6 +12,8 @@ __version__ = "1.1.0"
 
 from typing import Literal, NamedTuple
 
+from . import chars, cli, consts, dicts, grammar, iterables, numbers, objects
+
 
 class VersionInfo(NamedTuple):
     major: int
