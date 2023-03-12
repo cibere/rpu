@@ -1,10 +1,6 @@
-import json
-import os
 import platform
 import sys
 import webbrowser
-
-import requests
 
 import rpu
 
