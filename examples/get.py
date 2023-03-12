@@ -13,5 +13,8 @@ raw = [Foo(0), Foo(1), Foo(2), Foo(3)]
 # finding the item with an index of 5
 found = get(raw, index=5)
 
-# printing the found items index
-print(found.index)
+# printing the found items index, if it exists
+if found:
+    print(found.index)
+else:
+    print("Nothing found")
