@@ -1,5 +1,19 @@
 # Update Log
 
+## 1.2.0 (so far)
+
+**Breaking Changes**
+
+- Removed `chars`
+
+**Additions**
+
+- `rpu.async_.specific.asyncio_task`
+
+**Bug Fixes**
+
+None
+
 ## 1.1.0
 
 **Breaking Changes**

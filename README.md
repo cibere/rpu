@@ -26,6 +26,7 @@ Our docs are located at rpu.cibere.dev. View the <a href="https://rpu.cibere.dev
 
 - run_in_executor
 - execute_func
+- asyncio_task
 
 ### CLI
 
